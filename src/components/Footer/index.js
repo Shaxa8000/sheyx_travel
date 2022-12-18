@@ -65,7 +65,7 @@ export const Footer = () => {
           </IconWrapper>
         </Wrapper>
         <SubTitle style={{ display: 'flex', flexDirection: 'column' }}>
-          To'lov usullari:
+          {t('tulov')}
           <div className='payment__wrap'>
             <a href='https://payme.uz/@kabilov_rahmatullo'>
               <img src='https://mohirdev.uz/wp-content/uploads/Frame-222-3.png' alt="icon"/>
