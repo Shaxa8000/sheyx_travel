@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   SubContainer,
   SubTitle,
@@ -15,17 +15,17 @@ import {
   Location,
   MainButton,
   Div,
-} from "./style";
+} from './style';
 
 export const Footer = () => {
   return (
-    <Container id="contact">
+    <Container id='contact'>
       <SubContainer>
         <Wrapper>
           <SubTitle>
             <span>
               <Phone />
-            </span>{" "}
+            </span>{' '}
             Murojaat uchun telefonlar:
           </SubTitle>
           <Number>+998 91 160 02 62</Number>
@@ -38,31 +38,39 @@ export const Footer = () => {
 
           <IconWrapper>
             <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://t.me/sheyxtravel_uz"
+              rel='noopener noreferrer'
+              target='_blank'
+              href='https://t.me/sheyxtravel_uz'
             >
               <Telegram />
             </a>
             <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://t.me/SheyxTravel"
+              rel='noopener noreferrer'
+              target='_blank'
+              href='https://t.me/SheyxTravel'
             >
               <TelegramGroup />
             </a>
 
             <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.instagram.com/sheyx_travel/"
+              rel='noopener noreferrer'
+              target='_blank'
+              href='https://www.instagram.com/sheyx_travel/'
             >
               <Instagram />
             </a>
           </IconWrapper>
         </Wrapper>
+        <SubTitle style={{ display: 'flex', flexDirection: 'column' }}>
+          To'lov usullari:
+          <div className='payment__wrap'>
+            <a href='https://payme.uz/@kabilov_rahmatullo'>
+              <img src='https://mohirdev.uz/wp-content/uploads/Frame-222-3.png' />
+            </a>
+            <img src='https://mohirdev.uz/wp-content/uploads/Frame-223-3.png' />
+          </div>
+        </SubTitle>
       </SubContainer>
-
       <BottomFooter>
         <Address>
           <span>
@@ -74,16 +82,16 @@ export const Footer = () => {
           </div>
         </Address>
 
-        <Div className="Div">
+        <Div className='Div'>
           <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://t.me/Umravaxaj1"
+            rel='noopener noreferrer'
+            target='_blank'
+            href='https://t.me/Umravaxaj1'
           >
             <MainButton>Biz bilan Bog'laning</MainButton>
           </a>
         </Div>
-      </BottomFooter>
+      </BottomFooter>{' '}
     </Container>
   );
 };

@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import { BsTelephoneForward } from "react-icons/bs";
-import { FaTelegramPlane } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
-import { BsTelegram } from "react-icons/bs";
-import { ImLocation } from "react-icons/im";
+import styled from 'styled-components';
+import { BsTelephoneForward } from 'react-icons/bs';
+import { FaTelegramPlane } from 'react-icons/fa';
+import { BsInstagram } from 'react-icons/bs';
+import { BsTelegram } from 'react-icons/bs';
+import { ImLocation } from 'react-icons/im';
 
 const media = {
   mobile: `@media(max-width:480px)`,
@@ -52,6 +52,14 @@ export const SubTitle = styled.div`
 
   ${media.mobile} {
     font-size: 20px;
+  }
+  .payment__wrap {
+    display: flex;
+  }
+  .payment__wrap img {
+    width: 100px;
+    height: 60px;
+    margin-top: -20px;
   }
 `;
 export const Number = styled.div`
@@ -177,4 +185,7 @@ export const MainButton = styled.button`
   }
 `;
 
-export const Div = styled.div``;
+export const Div = styled.div`
+  display: flex;
+  align-items: baseline;
+`;
