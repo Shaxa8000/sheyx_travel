@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import logo from "../../assets/images/logo.JPG";
+import React, { useEffect, useRef, useState } from 'react';
+import logo from '../../assets/images/logo.JPG';
 import {
   Contact,
   Container,
@@ -11,25 +11,25 @@ import {
   MobileWrapper,
   Ul,
   Wrapper,
-  GlobeIcon
-} from "./style";
-import { Link } from "react-scroll";
-import "./style.css";
+  GlobeIcon,
+} from './style';
+import { Link } from 'react-scroll';
+import './style.css';
 import i18next from 'i18next';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 export const Header = () => {
   const headerRef = useRef(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       if (
         document.body.scrollTop > 1 ||
         document.documentElement.scrollTop > 1
       ) {
-        headerRef.current.classList.add("header_shrink");
+        headerRef.current.classList.add('header_shrink');
       } else {
-        headerRef.current.classList.remove("header_shrink");
+        headerRef.current.classList.remove('header_shrink');
       }
     });
     // return ()=> window.removeEventListener('scroll')
@@ -37,29 +37,29 @@ export const Header = () => {
 
   const mobile = window.innerWidth <= 768 ? true : false;
   const [barClosed, setBarClosed] = useState(true);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const languages = [
     {
       code: 'uz',
       name: 'Uzbek',
-      country_code: 'uz'
+      country_code: 'uz',
     },
     {
       code: 'ru',
       name: 'Russian',
-      country_code: 'ru'
+      country_code: 'ru',
     },
     {
       code: 'en',
       name: 'English',
-      country_code: 'gb'
+      country_code: 'gb',
     },
-  ]
+  ];
 
   return (
-    <Container className="" ref={headerRef}>
-      <Link to="main" span={true} smooth={true}>
+    <Container className='' ref={headerRef}>
+      <Link to='main' span={true} smooth={true}>
         <Logo src={logo} />
       </Link>
       {mobile ? (
@@ -69,7 +69,7 @@ export const Header = () => {
           ) : (
             <MobileUl>
               <Link
-                to="aboutUs"
+                to='aboutUs'
                 span={true}
                 smooth={true}
                 onClick={() => setBarClosed(true)}
@@ -79,7 +79,7 @@ export const Header = () => {
 
               <>
                 <Link
-                  to="aboutService"
+                  to='aboutService'
                   span={true}
                   smooth={true}
                   onClick={() => setBarClosed(true)}
@@ -89,7 +89,7 @@ export const Header = () => {
               </>
               <>
                 <Link
-                  to="gifts"
+                  to='gifts'
                   span={true}
                   smooth={true}
                   onClick={() => setBarClosed(true)}
@@ -103,38 +103,47 @@ export const Header = () => {
       ) : (
         <Wrapper>
           <Ul>
-            <Link to="aboutUs" span={true} smooth={true}>
+            <a href='#aboutUs'>
               <Li>{t('nav_about_us')}</Li>
-            </Link>
-            <Link to="aboutService" span={true} smooth={true}>
+            </a>
+            <a href='#aboutService'>
               <Li>{t('nav_xizmatlar')}</Li>
-            </Link>
-            <Link to="gifts" span={true} smooth={true}>
+            </a>
+            <a href='#gifts'>
               <Li>{t('nav_sovgalar')}</Li>
-            </Link>
+            </a>
           </Ul>
         </Wrapper>
-      )}{" "}
-      <div className="d-flex">
-      <div className="dropdown" >
-        <button id="dropdownMenuButton1" class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <GlobeIcon/>
-        </button>
-        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          {
-            languages.map(({code, name, country_code})=>{
+      )}{' '}
+      <div className='d-flex'>
+        <div className='dropdown'>
+          <button
+            id='dropdownMenuButton1'
+            class='btn btn-link dropdown-toggle'
+            type='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            <GlobeIcon />
+          </button>
+          <ul className='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
+            {languages.map(({ code, name, country_code }) => {
               return (
-                <li key={country_code} className= 'd-flex'>
-                  <span className={`fi fi-${country_code} mx-2` }></span>
-                  <button className="dropdown-item" onClick={()=> i18next.changeLanguage(code) }>{name}</button>
+                <li key={country_code} className='d-flex'>
+                  <span className={`fi fi-${country_code} mx-2`}></span>
+                  <button
+                    className='dropdown-item'
+                    onClick={() => i18next.changeLanguage(code)}
+                  >
+                    {name}
+                  </button>
                 </li>
-              )
-            })
-          }
-        </ul>
-      </div>
-        <Link to="contact" span={true} smooth={true}>
-        <Contact>{t('nav_btn')}</Contact>
+              );
+            })}
+          </ul>
+        </div>
+        <Link to='contact' span={true} smooth={true}>
+          <Contact>{t('nav_btn')}</Contact>
         </Link>
       </div>
     </Container>

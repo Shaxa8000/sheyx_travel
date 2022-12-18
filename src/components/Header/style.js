@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { FiMenu as ico } from "react-icons/fi";
-import {ReactComponent as globe} from '../../assets/icons/globe.svg';
+import styled from 'styled-components';
+import { FiMenu as ico } from 'react-icons/fi';
+import { ReactComponent as globe } from '../../assets/icons/globe.svg';
 
 const media = {
   mobile: `@media(max-width:480px)`,
@@ -61,12 +61,12 @@ export const MobileWrapper = styled.div`
   border-radius: 5px;
   height: fit-content;
   width: fit-content;
-  padding-bottom: ${({ barClosed }) => (barClosed ? "0rem" : "1rem")};
-  padding-top: ${({ barClosed }) => (barClosed ? "0rem" : "1rem")};
-  padding-right: ${({ barClosed }) => (barClosed ? "0rem" : "2rem")};
-  padding: ${({ barClosed }) => barClosed && "4px"};
-  margin-right: ${({ barClosed }) => (barClosed ? "1rem" : "0rem")};
-  margin-top: ${({ barClosed }) => (barClosed ? "0rem" : "-0.2rem")};
+  padding-bottom: ${({ barClosed }) => (barClosed ? '0rem' : '1rem')};
+  padding-top: ${({ barClosed }) => (barClosed ? '0rem' : '1rem')};
+  padding-right: ${({ barClosed }) => (barClosed ? '0rem' : '2rem')};
+  padding: ${({ barClosed }) => barClosed && '4px'};
+  margin-right: ${({ barClosed }) => (barClosed ? '1rem' : '0rem')};
+  margin-top: ${({ barClosed }) => (barClosed ? '0rem' : '-0.2rem')};
   z-index: 10;
 
   ${media.mobile} {
@@ -149,6 +149,10 @@ export const Ul = styled.div`
   display: flex;
   gap: 32px;
   color: white;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 `;
 export const Li = styled.div`
   cursor: pointer;
