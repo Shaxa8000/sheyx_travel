@@ -124,14 +124,14 @@ export const Card = styled.div`
   box-sizing: border-box;
   border: 1px solid white;
   width: 250px;
-  height: 200px;
+  height: 210px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 30px 30px;
-  gap: 20px;
+  gap: 5px;
 
   background-color: white;
   border-radius: 30px;
@@ -155,7 +155,7 @@ export const Card = styled.div`
   }
 `;
 export const Text = styled.div`
-  font-size: 20px;
+  font-size: 18px;
   font-family: sans-serif;
   text-align: center;
   font-weight: 600;

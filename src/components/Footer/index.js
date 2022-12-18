@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import React from "react";
 import {
   SubContainer,
@@ -16,8 +17,10 @@ import {
   MainButton,
   Div,
 } from "./style";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const {t} = useTranslation();
   return (
     <Container id="contact">
       <SubContainer>
@@ -26,7 +29,7 @@ export const Footer = () => {
             <span>
               <Phone />
             </span>{" "}
-            Murojaat uchun telefonlar:
+            {t('contacts')}
           </SubTitle>
           <Number>+998 91 160 02 62</Number>
           <Number>+998 95 307 00 27</Number>
@@ -34,7 +37,7 @@ export const Footer = () => {
         </Wrapper>
 
         <Wrapper>
-          <SubTitle>Ijtimoiy sahifalarimiz:</SubTitle>
+          <SubTitle>{t('social_media')}</SubTitle>
 
           <IconWrapper>
             <a
@@ -69,8 +72,8 @@ export const Footer = () => {
             <Location />
           </span>
           <div>
-            Andijon shahar BOBURSHOH ko’chasi;
-            <div>MO'LJAL: 2-tug’ruqxona, Stomotologiya atrofida.</div>
+            {t('address')}
+            <div>{t('muljal')}</div>
           </div>
         </Address>
 
@@ -80,7 +83,7 @@ export const Footer = () => {
             target="_blank"
             href="https://t.me/Umravaxaj1"
           >
-            <MainButton>Biz bilan Bog'laning</MainButton>
+            <MainButton>{t('contact_us')}</MainButton>
           </a>
         </Div>
       </BottomFooter>

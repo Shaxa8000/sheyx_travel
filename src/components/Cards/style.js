@@ -14,7 +14,7 @@ import { ReactComponent as man } from "../../assets/icons/man.svg";
 //   mobile: `@media(max-width:480px)`,
 // };
 
-export const Container = styled.div`
+export const Wrap = styled.div`
   box-sizing: border-box;
   border: 1px solid white;
   width: 250px;
@@ -29,6 +29,11 @@ export const Container = styled.div`
 
   background-color: white;
   border-radius: 30px;
+  .title{
+    font-family: sans-serif;
+  font-weight: 600;  
+  text-align: center;
+  }
 
 `;
 
@@ -73,8 +78,7 @@ export const IconMeal = styled(GiMeal)`
 `;
 
 export const Title = styled.div`
-  font-family: sans-serif;
-  font-weight: 600;
+
 `;
 
 export const Div = styled.div``;
