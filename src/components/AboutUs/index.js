@@ -31,26 +31,25 @@ export const AboutUs = () => {
           <Card>
             <img alt="" src={kaba} />
             <Text>
-              <span>UMRA ZIYORATI</span> {new Date().getFullYear()}
+              <span>{t('umra_ziyorati')}</span> {new Date().getFullYear()}
             </Text>
           </Card>
           <Card>
             <img alt="" src={calendar} />
             <Text>
-              <span>14 kunlik</span> Muborak Umra
+              <span>{t('kun')}</span> {t('muborak_umra')}
             </Text>
           </Card>
           <Card>
             <img alt="" width={"80px"} src={location} />
             <Text>
-              <span>ANDIJONdan</span> olib ketib, <span>ANDIJONga</span> olib
-              kelinadi{" "}
+              {t('olib_ketish')}
             </Text>
           </Card>
           <Card>
             <img alt="" src={airport} />
             <Text>
-              Uchib ketish tartibi: <span>O’SH shahridan</span>{" "}
+              {t('uchish_tartibi')} <span>{t('uchish_manzili')}</span>{" "}
             </Text>
           </Card>
         </Wrapper>

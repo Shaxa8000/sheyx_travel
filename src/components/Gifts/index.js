@@ -6,32 +6,33 @@ import zazam96 from "../../assets/images/zamzam96.png";
 import newbriefcase from "../../assets/images/newbriefcase96.png";
 import suit from "../../assets/images/suit100.png";
 import waistcoat96 from "../../assets/images/waistcoat96.png";
+import { useTranslation } from "react-i18next";
 
 export const Gifts = () => {
+  const {t} = useTranslation();
   return (
     <Container id="gifts">
-      <Title>Sovg'alar</Title>
-
+      <Title>{t('gifts')}</Title>
       <Wrapper>
         <Card>
           <img alt="" src={quran} />
-          <Text>Quron</Text>
+          <Text>{t('quron')}</Text>
         </Card>
         <Card>
           <img alt="" src={zazam96} />
-          <Text>Zam Zam </Text>
+          <Text>{t('zam_zam')}</Text>
         </Card>
         <Card>
           <img alt="" src={newbriefcase} />
-          <Text>Sumka</Text>
+          <Text>{t('sumka')}</Text>
         </Card>
         <Card>
           <img alt="" src={waistcoat96} />
-          <Text>Nimcha</Text>
+          <Text>{t('nimcha')}</Text>
         </Card>
         <Card>
           <img alt="" src={suit} />
-          <Text>Peyjak</Text>
+          <Text>{t('pidjak')}</Text>
         </Card>
       </Wrapper>
     </Container>

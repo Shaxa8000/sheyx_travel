@@ -22,7 +22,7 @@ i18n
   .use(HttpApi)
   .init({
     supportedLngs: ['en', 'uz', 'ru',],
-    fallbackLng: 'en',
+    fallbackLng: 'uz',
     detection: {
       order: ['htmlTag', 'cookie', 'localStorage', 'subdomain', 'path'],
       caches: ['cookie'],

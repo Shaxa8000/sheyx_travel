@@ -1,4 +1,5 @@
-import React from 'react';
+import { t } from "i18next";
+import React from "react";
 import {
   SubContainer,
   SubTitle,
@@ -15,9 +16,11 @@ import {
   Location,
   MainButton,
   Div,
-} from './style';
+} from "./style";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const {t} = useTranslation();
   return (
     <Container id='contact'>
       <SubContainer>
@@ -25,8 +28,8 @@ export const Footer = () => {
           <SubTitle>
             <span>
               <Phone />
-            </span>{' '}
-            Murojaat uchun telefonlar:
+            </span>{" "}
+            {t('contacts')}
           </SubTitle>
           <Number>+998 91 160 02 62</Number>
           <Number>+998 95 307 00 27</Number>
@@ -34,7 +37,7 @@ export const Footer = () => {
         </Wrapper>
 
         <Wrapper>
-          <SubTitle>Ijtimoiy sahifalarimiz:</SubTitle>
+          <SubTitle>{t('social_media')}</SubTitle>
 
           <IconWrapper>
             <a
@@ -65,9 +68,9 @@ export const Footer = () => {
           To'lov usullari:
           <div className='payment__wrap'>
             <a href='https://payme.uz/@kabilov_rahmatullo'>
-              <img src='https://mohirdev.uz/wp-content/uploads/Frame-222-3.png' />
+              <img src='https://mohirdev.uz/wp-content/uploads/Frame-222-3.png' alt="icon"/>
             </a>
-            <img src='https://mohirdev.uz/wp-content/uploads/Frame-223-3.png' />
+            <img src='https://mohirdev.uz/wp-content/uploads/Frame-223-3.png'  alt="icon"/>
           </div>
         </SubTitle>
       </SubContainer>
@@ -77,8 +80,8 @@ export const Footer = () => {
             <Location />
           </span>
           <div>
-            Andijon shahar BOBURSHOH ko’chasi;
-            <div>MO'LJAL: 2-tug’ruqxona, Stomotologiya atrofida.</div>
+            {t('address')}
+            <div>{t('muljal')}</div>
           </div>
         </Address>
 
@@ -88,7 +91,7 @@ export const Footer = () => {
             target='_blank'
             href='https://t.me/Umravaxaj1'
           >
-            <MainButton>Biz bilan Bog'laning</MainButton>
+            <MainButton>{t('contact_us')}</MainButton>
           </a>
         </Div>
       </BottomFooter>{' '}

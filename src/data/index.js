@@ -12,7 +12,7 @@ import {
 export const data = [
   {
     icon: <IconVisa />,
-    title: "Umra Viza",
+    title: "Umra viza",
   },
 
   {
