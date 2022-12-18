@@ -22,7 +22,7 @@ import { useTranslation } from "react-i18next";
 export const Footer = () => {
   const {t} = useTranslation();
   return (
-    <Container id="contact">
+    <Container id='contact'>
       <SubContainer>
         <Wrapper>
           <SubTitle>
@@ -41,31 +41,39 @@ export const Footer = () => {
 
           <IconWrapper>
             <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://t.me/sheyxtravel_uz"
+              rel='noopener noreferrer'
+              target='_blank'
+              href='https://t.me/sheyxtravel_uz'
             >
               <Telegram />
             </a>
             <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://t.me/SheyxTravel"
+              rel='noopener noreferrer'
+              target='_blank'
+              href='https://t.me/SheyxTravel'
             >
               <TelegramGroup />
             </a>
 
             <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.instagram.com/sheyx_travel/"
+              rel='noopener noreferrer'
+              target='_blank'
+              href='https://www.instagram.com/sheyx_travel/'
             >
               <Instagram />
             </a>
           </IconWrapper>
         </Wrapper>
+        <SubTitle style={{ display: 'flex', flexDirection: 'column' }}>
+          To'lov usullari:
+          <div className='payment__wrap'>
+            <a href='https://payme.uz/@kabilov_rahmatullo'>
+              <img src='https://mohirdev.uz/wp-content/uploads/Frame-222-3.png' alt="icon"/>
+            </a>
+            <img src='https://mohirdev.uz/wp-content/uploads/Frame-223-3.png'  alt="icon"/>
+          </div>
+        </SubTitle>
       </SubContainer>
-
       <BottomFooter>
         <Address>
           <span>
@@ -77,16 +85,16 @@ export const Footer = () => {
           </div>
         </Address>
 
-        <Div className="Div">
+        <Div className='Div'>
           <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://t.me/Umravaxaj1"
+            rel='noopener noreferrer'
+            target='_blank'
+            href='https://t.me/Umravaxaj1'
           >
             <MainButton>{t('contact_us')}</MainButton>
           </a>
         </Div>
-      </BottomFooter>
+      </BottomFooter>{' '}
     </Container>
   );
 };
